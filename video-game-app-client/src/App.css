@@ -30,6 +30,45 @@
   font-family: 'Oleo Script Swash Caps', cursive;
 }
 
+.search-bar{
+  height: 40px;
+  width: 50%;
+  border-right: none;
+  border-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  border: 1px solid #F9F3EE;
+  cursor: pointer;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.search-btn{
+  height: 44px;
+  width: 100%;
+  background-color: #B4E197;
+  border: 1px solid #F9F3EE;
+  border-left: none;
+  width: 2%;
+  border-radius: 5px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.search-bar:hover{
+  opacity: 0.8;
+  border: 1px solid #417D7A;
+}
+button{
+  padding-right: 30px;
+}
+
+.search-btn:hover{
+  opacity: 0.8;
+  border: 1px solid #add891;
+}
+
 .video-game-container{
   /*border: 3px solid black;*/
   display: grid;

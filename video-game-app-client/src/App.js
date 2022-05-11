@@ -6,6 +6,9 @@ import NavBar from './Components/NavBar';
 
 function App() {
   const [videoGames, setVideoGames] = useState([])
+  const [search, setSearch] = useState("")
+
+ 
 
   const request = async () => {
     let req = await fetch('http://localhost:9292/video_games')
@@ -18,10 +21,16 @@ function App() {
     request()
   }, [])
 
+   const handleSearchChange = (newSearch) => {
+    setSearch(newSearch)
+  }
+
+  const displayVideoGames = videoGames.filter(videoGame => videoGame.title.toLowerCase().includes(search.toLowerCase()))
+
   return (
     <div className="App">
-      <NavBar />
-      <GameList videoGames={videoGames} setVideoGames={setVideoGames}/>
+      <NavBar onSearchChange={handleSearchChange}/>
+      <GameList videoGames={displayVideoGames} setVideoGames={setVideoGames}/>
     </div>
   );
 }
