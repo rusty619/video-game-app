@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
   # Read a list of Video Games
   get '/video_games' do 
     video_games = VideoGame.all 
-    video_games.to_json(only: [:id, :title, :genre, :condition, :star_rating, :developer, :img],
+    video_games.to_json(only: [:id, :title, :genre, :condition, :star_rating, :developer, :img, :value],
     include: {
       console: {only: [:id, :name]}
     })

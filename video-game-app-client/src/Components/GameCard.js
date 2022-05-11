@@ -1,5 +1,5 @@
 function GameCard({videoGame}) {
-    const {id, condition, console:{name}, developer, genre, img, star_rating, title} = videoGame
+    const {id, condition, console:{name}, developer, genre, img, star_rating, title, value} = videoGame
 
     function showStarRating(){
         let str = ""
@@ -24,6 +24,8 @@ function GameCard({videoGame}) {
                     Review: <span className="star-rating">{showStarRating()}</span>
                     <br/>
                     Platform: {name}
+                    <br/>
+                    Price: ${value}
                 </div>
             </div>
         )
