@@ -1,38 +1,79 @@
 .App {
   text-align: center;
+  background-color: #F9F3EE;
+  font-family: 'Merriweather Sans', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar{
+  margin: auto;
+  padding: auto;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#icon{
+  width: 5em;
+  height: 1fr;
+  position: relative;
+  right: 650px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#icon:hover{
+  border: 5px solid #73C3B1;
+  border-radius: 1000px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.company-name{
+  position: relative;
+  bottom: 90px;
+  right: 490px;
+  font-size: 20px;
+  font-family: 'Oleo Script Swash Caps', cursive;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.video-game-container{
+  /*border: 3px solid black;*/
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr));
+  grid-gap: 1rem;
+  padding-top: 20px;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.video-game-item{
+  padding-top: 10px;
+  border: 3px solid #C5D8A4;
+  background-color: white;
+  color: #68A7AD;
+  border-radius: 8px;
+}
+
+img{
+  width: 13rem;
+  height: 1fr;
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  
+}
+
+img:hover{
+  border-left: 6px inset #B4E197;
+  border-bottom: 6px inset #B4E197;
+}
+
+.desc{
+  position: relative;
+  font-family: 'Roboto Slab', serif;
+}
+
+.star-rating{
+  color: #F32424;
+}
+
+.star-rating:hover{
+  color: blue;
 }

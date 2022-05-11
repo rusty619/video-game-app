@@ -2,7 +2,7 @@ import GameCard from "./GameCard"
 function GameList({videoGames, setVideoGames}){
     console.log(videoGames)
     return(
-        <div>
+        <div className="video-game-container">
             {
                 videoGames.map((videoGame) => {
                     return(

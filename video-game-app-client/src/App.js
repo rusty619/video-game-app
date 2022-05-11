@@ -1,6 +1,8 @@
 import './App.css';
-import GameList from './Components/GameList';
 import React, { useState, useEffect } from 'react';
+import GameList from './Components/GameList';
+import NavBar from './Components/NavBar';
+
 
 function App() {
   const [videoGames, setVideoGames] = useState([])
@@ -18,6 +20,7 @@ function App() {
 
   return (
     <div className="App">
+      <NavBar />
       <GameList videoGames={videoGames} setVideoGames={setVideoGames}/>
     </div>
   );
