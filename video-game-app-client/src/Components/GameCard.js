@@ -1,4 +1,8 @@
+import React, { useState, useEffect } from 'react';
+
 function GameCard({videoGame, onVideoGameDelete}) {
+    const [isSold, setIsSold] = useState(false)
+
     const {id, condition, console:{name}, developer, genre, img, star_rating, title, value} = videoGame
 
     function showStarRating(){
@@ -14,6 +18,20 @@ function GameCard({videoGame, onVideoGameDelete}) {
             method: "DELETE",
         })
         onVideoGameDelete(id)
+    }
+
+    const handleBuyBtn = () => {
+        setIsSold(!isSold)
+        fetch(`http://localhost:9292/video_games/${id}`, {
+            method: "PATCH",
+            headers:{
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                sold: !isSold
+            })
+        })
+        console.log("You Updated SOLD!!")
     }
 
         return(
@@ -35,7 +53,7 @@ function GameCard({videoGame, onVideoGameDelete}) {
                     <h3>Price: ${value}</h3>
                     
                     <div className="btn-section">
-                        <button className="buy-btn">buy</button>
+                        <button className={isSold ? "sold-buy-btn" : "buy-btn"} onClick={handleBuyBtn}>{isSold ? "sold" : "buy" }</button>
                          <button className="del-btn" onClick={handleDeleteBtn}>delete</button>
                     </div>
                 </div>

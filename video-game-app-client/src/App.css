@@ -152,6 +152,23 @@ img:hover{
   cursor: pointer;
 }
 
+.sold-buy-btn{
+  background-color: #73C3B1;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Merriweather Sans', sans-serif;
+    width: 18%;
+    padding: 15px;
+    opacity: .2;
+}
+
+.sold-buy-btn:hover{
+  cursor: pointer;
+}
+
 .del-btn{
   background-color: #B22727;
     color: white;
