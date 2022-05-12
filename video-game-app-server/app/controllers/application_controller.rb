@@ -41,7 +41,8 @@ class ApplicationController < Sinatra::Base
     video_game = VideoGame.find(params[:id])
     video_game.update(
       condition: params[:condition],
-      star_rating: params[:star_rating]
+      star_rating: params[:star_rating],
+      sold: params[:sold]
     )
     video_game.to_json
   end
