@@ -1,4 +1,4 @@
-function GameCard({videoGame}) {
+function GameCard({videoGame, onVideoGameDelete}) {
     const {id, condition, console:{name}, developer, genre, img, star_rating, title, value} = videoGame
 
     function showStarRating(){
@@ -7,6 +7,13 @@ function GameCard({videoGame}) {
             str += "♥"
         }
         return str
+    }
+
+    const handleDeleteBtn = () => {
+        fetch(`http://localhost:9292/video_games/${id}`, {
+            method: "DELETE",
+        })
+        onVideoGameDelete(id)
     }
 
         return(
@@ -29,6 +36,7 @@ function GameCard({videoGame}) {
                     
                     <div className="btn-section">
                         <button className="buy-btn">buy</button>
+                         <button className="del-btn" onClick={handleDeleteBtn}>delete</button>
                     </div>
                 </div>
             </div>

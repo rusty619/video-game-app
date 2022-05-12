@@ -27,10 +27,17 @@ function App() {
 
   const displayVideoGames = videoGames.filter(videoGame => videoGame.title.toLowerCase().includes(search.toLowerCase()))
 
+  const handleDeleteGame = (id) => {
+    const updateGame = videoGames.filter((videoGame) => videoGame.id !== id)
+    setVideoGames(updateGame)
+  }
+
   return (
     <div className="App">
       <NavBar onSearchChange={handleSearchChange}/>
-      <GameList videoGames={displayVideoGames} setVideoGames={setVideoGames}/>
+      <GameList videoGames={displayVideoGames} 
+                setVideoGames={setVideoGames}
+                onVideoGameDelete={handleDeleteGame}/>
     </div>
   );
 }
