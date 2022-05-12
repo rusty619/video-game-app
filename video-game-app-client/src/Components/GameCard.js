@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
 function GameCard({videoGame, onVideoGameDelete}) {
-    const [isSold, setIsSold] = useState(false)
-
-    const {id, condition, console:{name}, developer, genre, img, star_rating, title, value} = videoGame
+    const {id, condition, console:{name}, developer, genre, img, star_rating, title, value, sold} = videoGame
+    const [isSold, setIsSold] = useState(sold)
 
     function showStarRating(){
         let str = ""
@@ -31,7 +30,7 @@ function GameCard({videoGame, onVideoGameDelete}) {
                 sold: !isSold
             })
         })
-        console.log("You Updated SOLD!!")
+        console.log(`You Updated SOLD!! Its ${isSold}`)
     }
 
         return(

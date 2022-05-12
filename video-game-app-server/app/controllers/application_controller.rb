@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
   # Read a list of Video Games
   get '/video_games' do 
     video_games = VideoGame.all 
-    video_games.to_json(only: [:id, :title, :genre, :condition, :star_rating, :developer, :img, :value],
+    video_games.to_json(only: [:id, :title, :genre, :condition, :star_rating, :developer, :img, :value, :sold],
     include: {
       console: {only: [:id, :name]}
     })
@@ -15,7 +15,7 @@ class ApplicationController < Sinatra::Base
   # Read an individual Video Game
   get '/video_games/:id' do 
     video_game = VideoGame.find(params[:id])
-    video_game.to_json(only:[:id,:title,:genre,:condition,:star_rating,:developer,:img,:value],
+    video_game.to_json(only:[:id,:title,:genre,:condition,:star_rating,:developer,:img,:value, :sold],
     include: {
       console:{only: [:id,:name]}
     })
@@ -40,8 +40,8 @@ class ApplicationController < Sinatra::Base
   patch "/video_games/:id" do
     video_game = VideoGame.find(params[:id])
     video_game.update(
-      condition: params[:condition],
-      star_rating: params[:star_rating],
+      #condition: params[:condition],
+      #star_rating: params[:star_rating],
       sold: params[:sold]
     )
     video_game.to_json

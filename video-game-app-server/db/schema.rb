@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2022_05_12_003801) do
     t.integer "console_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.boolean "sold", default: false
+    t.boolean "sold"
   end
 
 end

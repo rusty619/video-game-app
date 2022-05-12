@@ -23,7 +23,7 @@ function NavBar({onSearchChange}){
             onChange={e => setSearch(e.target.value)}
             />
             <button type="submit" className="search-btn">
-                <i class="fa-solid fa-magnifying-glass"></i>
+                <i className="fa-solid fa-magnifying-glass"></i>
             </button>
         </form>
     </div>)
