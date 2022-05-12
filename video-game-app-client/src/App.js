@@ -2,7 +2,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import GameList from './Components/GameList';
 import NavBar from './Components/NavBar';
-import CreateForm from './Components/CreateForm';
+
 
 
 function App() {
@@ -40,8 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <CreateForm onAddGames={handleAddGame}/>
-      <NavBar onSearchChange={handleSearchChange}/>
+      <NavBar onSearchChange={handleSearchChange} handleAddGame={handleAddGame}/>
       <GameList videoGames={displayVideoGames} 
                 setVideoGames={setVideoGames}
                 onVideoGameDelete={handleDeleteGame}/>

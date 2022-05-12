@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 function GameCard({videoGame, onVideoGameDelete}) {
-    const {id, condition, console:{name}, developer, genre, img, star_rating, title, value, sold} = videoGame
+    const {id, condition, developer, console:{name},genre, img, star_rating, title, value, sold} = videoGame
     const [isSold, setIsSold] = useState(sold)
 
     function showStarRating(){

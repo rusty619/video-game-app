@@ -6,7 +6,7 @@ class ApplicationController < Sinatra::Base
   # Read a list of Video Games
   get '/video_games' do 
     video_games = VideoGame.all 
-    video_games.to_json(only: [:id, :title, :genre, :condition, :star_rating, :developer, :img, :value, :sold],
+    video_games.to_json(only: [:id, :title, :genre, :condition, :star_rating, :developer, :img, :value,:console_id,:sold],
     include: {
       console: {only: [:id, :name]}
     })
@@ -15,9 +15,9 @@ class ApplicationController < Sinatra::Base
   # Read an individual Video Game
   get '/video_games/:id' do 
     video_game = VideoGame.find(params[:id])
-    video_game.to_json(only:[:id,:title,:genre,:condition,:star_rating,:developer,:img,:value, :sold],
+    video_game.to_json(only:[:id,:title,:genre,:condition,:star_rating,:developer,:img,:value, :sold, :console_id],
     include: {
-      console:{only: [:id,:name]}
+     console:{only: [:id,:name]}
     })
   end
 

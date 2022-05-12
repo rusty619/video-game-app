@@ -35,6 +35,22 @@ h3{
   font-family: 'Oleo Script Swash Caps', cursive;
 }
 
+.display-form-btn{
+  background-color: #78DEC7;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+  height: 60px;
+  color: #BAABDA;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.display-form-btn:hover{
+  opacity: 0.75;
+  cursor: pointer;
+}
+
 .search-bar{
   height: 40px;
   width: 50%;
@@ -185,5 +201,59 @@ img:hover{
 
 .del-btn:hover {
   opacity: .75;
+  cursor: pointer;
+}
+
+.new-game-form{
+  background-color: #97C4B8;
+  border-radius: 5px;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.input-form{
+  margin: 30px;
+  border: none;
+  width: 15%;
+  height: 2em;
+  border-radius: 20px;
+}
+
+.h2-form{
+  font-size: 30px;
+  font-family: 'IBM Plex Sans', sans-serif;
+}
+
+.text-form{
+  font-size: 18px;
+}
+
+.platform-text-form{
+  font-size: 18px;
+  margin-right:20px;
+}
+
+.btn-form{
+  font-size: 30px;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #A1E3D8;
+}
+
+.select-form{
+  margin: 5px;
+  border: none;
+  height: 2em;
+  border-radius: 10px;
+}
+
+.btn-form:hover{
+  opacity: 0.7;
   cursor: pointer;
 }
