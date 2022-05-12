@@ -4,6 +4,11 @@
   font-family: 'Merriweather Sans', sans-serif;
 }
 
+h3{
+  font-size: 15px;
+  font-weight: bold;
+}
+
 .navbar{
   margin: auto;
   padding: auto;
@@ -38,7 +43,6 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
   border: 1px solid #F9F3EE;
-  cursor: pointer;
   font-family: 'IBM Plex Sans', sans-serif;
 }
 
@@ -91,6 +95,11 @@ button{
   border-radius: 8px;
 }
 
+.video-game-item:hover{
+  margin: 5px;
+  border: 3px solid #FF6FB5;
+}
+
 img{
   width: 13rem;
   height: 1fr;
@@ -116,4 +125,29 @@ img:hover{
 
 .star-rating:hover{
   color: blue;
+}
+
+.section{
+  margin-top: 10px;
+}
+
+.btn-section{
+  margin-top: 10px;
+}
+
+.buy-btn{
+  background-color: #73C3B1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  text-align: center;
+  font-family: 'Merriweather Sans', sans-serif;
+  width:18%;
+  padding: 15px;
+}
+
+.buy-btn:hover{
+  opacity: .75;
+  cursor: pointer;
 }
