@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
+import Search from './Search';
 
 function NavBar({onSearchChange}){
 
-    const [search, setSearch] = useState("")
-    const handleSubmit = (event) => {
-        event.preventDefault()
-        onSearchChange(search)
-    }
+    
 
     return(
     <div className="navbar">
@@ -14,18 +11,8 @@ function NavBar({onSearchChange}){
         <div className="company-name">
             <h2>Retro Asylum</h2>
         </div>
-        <form onSubmit={handleSubmit}>
-            <input
-            type="text"
-            name="search"
-            className="search-bar"
-            placeholder="Search for games..."
-            onChange={e => setSearch(e.target.value)}
-            />
-            <button type="submit" className="search-btn">
-                <i className="fa-solid fa-magnifying-glass"></i>
-            </button>
-        </form>
+        <Search onSearchChange={onSearchChange} />
+       
     </div>)
 }
 export default NavBar
