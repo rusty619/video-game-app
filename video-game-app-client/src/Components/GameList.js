@@ -1,6 +1,5 @@
 import GameCard from "./GameCard"
 function GameList({videoGames, setVideoGames, onVideoGameDelete}){
-    console.log(videoGames)
     return(
         <div className="video-game-container">
             {
