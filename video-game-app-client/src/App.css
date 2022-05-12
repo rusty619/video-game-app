@@ -36,14 +36,16 @@ h3{
 }
 
 .display-form-btn{
-  background-color: #78DEC7;
+  background-color: #16A596;/*#78DEC7;*/
   margin-bottom: 30px;
   border-radius: 20px;
   padding: 10px;
   border: none;
   height: 60px;
-  color: #BAABDA;
+  color: #F7F7F7;
   font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .display-form-btn:hover{
