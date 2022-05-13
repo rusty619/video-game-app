@@ -18,7 +18,7 @@ h3{
   width: 5em;
   height: 1fr;
   position: relative;
-  right: 650px;
+  right: 630px;
 }
 
 #icon:hover{
@@ -65,17 +65,18 @@ h3{
 }
 
 .search-btn{
-  height: 46px;
-  padding-bottom: 2px;
   background-color: #B4E197;
   border: 1px solid #F9F3EE;
   border-left: none;
+  box-sizing: border-box;
   width: 2%;
+  height: 46px;
   border-radius: 5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
   cursor: pointer;
   font-size: 16px;
+  position: relative;
 }
 
 .search-bar:hover{
